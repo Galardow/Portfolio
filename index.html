@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" target="_blank">
+                My Portfolio.
+            </a>
+        </div>
+        
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item active">Home</a></li>
+            <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#certificate" class="nav-item">Certificate</a></li>
+            <li><a href="document/CV-AlexandroGalardoRianto.pdf" target="_blank" class="nav-item">CV Preview</a></li>
+            <li><a href="https://www.linkedin.com/in/alexandro-galardo-8b911b294/"><span class="linkedin">Linkedin</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <header id="home" class="hero hidden section-target">
+        <div class="hero-image">
+            <img src="images/selfphoto.jpeg" alt="Self Photo">
+        </div>
+        <div class="hero-text">
+            <h1>Hi, I am <span class="highlight" id="typewriter"></span><span class="cursor">&nbsp;</span></h1>
+            <p>I am a double degree student studying <span class="highlight">business</span> and <span class="highlight">information systems</span>.</p>
+            <a href="mailto:alexandrogalardo42@gmail.com" class="btn">Contact Me</a>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio-section hidden section-target">
+        <h2>My Portfolio</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="images/portfolio/sudoku.png" alt="Sudoku" class="card-img"> 
+                <div class="card-content">
+                    <h3>Sudoku Solver</h3>
+                    <p>I made a sudoku solver using HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Sudoku-Solver.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://galardow.github.io/Sudoku-Solver/" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/blockblastsolver.png" alt="Block Blast Solver" class="card-img"> 
+                <div class="card-content">
+                    <h3>Block Blast Solver</h3>
+                    <p>I made a Block Blast Solver using HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Block-Blast-Solver.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://galardow.github.io/Block-Blast-Solver/" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/cashier.png" alt="Cashier" class="card-img"> 
+                <div class="card-content">
+                    <h3>Cashier</h3>
+                    <p>I made a cashier management application GUI integrated with a Database using Python Tkinter.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Python-Cashier.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/propertypriceprediction.png" alt="Property Price Prediction" class="card-img"> 
+                <div class="card-content">
+                    <h3>Property Price Prediction</h3>
+                    <p>I made a simple machine learning to predict property price Python NumPy.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Property-Price-Prediction.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/applesalesanalysis.png" alt="Apple Sales Analysis" class="card-img"> 
+                <div class="card-content">
+                    <h3>Apple Sales Analysis</h3>
+                    <p>I analyze Apple Sales using Python Pandas, Microsoft SQL, and Tableau.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Apple-Sales-Analysis.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://public.tableau.com/app/profile/alexandro.galardo/viz/AppleSalesAnalysis/Dashboard1?publish=yes" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/heartattackanalysis.png" alt="Heart Attack Analysis" class="card-img"> 
+                <div class="card-content">
+                    <h3>Heart Attack Analysis</h3>
+                    <p>I analyze Indonesian Heart Attack Factors using Python Pandas, Microsoft SQL, and Tableau.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Heart-Attack-Analysis.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://public.tableau.com/app/profile/alexandro.galardo/viz/HeartAttackAnalysis_17752127208180/Dashboard1?publish=yes" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/globaltemperature.png" alt="Global Temperature" class="card-img"> 
+                <div class="card-content">
+                    <h3>Global Temperature Analysis</h3>
+                    <p>I analyze Global Temperature using Tableau.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Global-Temperature.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://public.tableau.com/app/profile/alexandro.galardo/viz/GlobalTemperatureAnalysis_17751179564260/Dashboard1?publish=yes" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/nykacampaignanalysis.png" alt="Khodam Checker" class="card-img"> 
+                <div class="card-content">
+                    <h3>Nykaa Campaign Analysis</h3>
+                    <p>I analyze Nykaa Campaign using Python Pandas, Microsoft SQL, and Tableau.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Nykaa-Campaign.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://public.tableau.com/app/profile/alexandro.galardo/viz/NykaaCampaignAnalysis/Dashboard1?publish=yes" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/nikejordansalesanalysis.png" alt="Nike Jordan Sales" class="card-img"> 
+                <div class="card-content">
+                    <h3>Nike Jordan Sales Analysis</h3>
+                    <p>I analyze Nike Jordan Sales using Tableau.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Tableau-Nike-Jordan-Sales.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://public.tableau.com/app/profile/alexandro.galardo/viz/NikeJordanSalesAnalysis/NikeJordanSalesDashboard?publish=yes" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/indonesiadeathcauses.png" alt="Indonesia Death Causes Analysis" class="card-img"> 
+                <div class="card-content">
+                    <h3>Indonesia Death Causes Analysis</h3>
+                    <p>I analyze Indonesia Death Causes using Python Pandas, Microsoft SQL, and Tableau.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Indonesia-Death-Causes-Analysis.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://public.tableau.com/app/profile/alexandro.galardo/viz/IndonesiaDeathCausesAnalysis/Dashboard1?publish=yes" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/coffeesaleschart.png" alt="Coffee Sales Analysis" class="card-img"> 
+                <div class="card-content">
+                    <h3>Coffee Sales Analysis</h3>
+                    <p>I analyze Coffee Sales using Tableau.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Tableau-Coffee-Sales.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://public.tableau.com/app/profile/alexandro.galardo/viz/DummyCoffeeSalesAnalysis/Dashboard2?publish=yes" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/carrental.png" alt="Car Rental" class="card-img"> 
+                <div class="card-content">
+                    <h3>Car Rental</h3>
+                    <p>I made a Rental Website integrated with Database using C# ASP.NET.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Car-Rental.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/todolist.png" alt="To Do List" class="card-img"> 
+                <div class="card-content">
+                    <h3>To Do List</h3>
+                    <p>I made a To Do List Website using React and Vite.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/To-Do-List.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://galardow.github.io/To-Do-List/" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/tictactoe.png" alt="Tic Tac Toe" class="card-img"> 
+                <div class="card-content">
+                    <h3>Tic Tac Toe</h3>
+                    <p>I made tic-tac-toe using HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Tic-Tac-Toe.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://galardow.github.io/Tic-Tac-Toe/" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/calculator.png" alt="Calculator" class="card-img"> 
+                <div class="card-content">
+                    <h3>Calculator</h3>
+                    <p>I made a calculator using HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Calculator.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://galardow.github.io/Calculator/" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/portfolio/rockpaperscissors.png" alt="Rock Paper Scissors" class="card-img"> 
+                <div class="card-content">
+                    <h3>Rock Paper Scissors</h3>
+                    <p>I made rock paper scissors using HTML, CSS, and JavaScript.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Galardow/Rock-Paper-Scissors.git" target="_blank" class="btn-small btn-outline">GitHub</a>
+                        <a href="https://galardow.github.io/Rock-Paper-Scissors/" target="_blank" class="btn-small">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section hidden section-target">
+        <h2>My Skills</h2>
+        <div class="skills-carousel-wrapper">
+            <div class="skills-track">
+                <div class="card"><img src="images/skills/pythonlogo.png" alt="Python" class="skills-img"><h3>Python</h3></div>
+                <div class="card"><img src="images/skills/htmllogo.png" alt="HTML" class="skills-img"><h3>HTML</h3></div>
+                <div class="card"><img src="images/skills/csslogo.png" alt="CSS" class="skills-img"><h3>CSS</h3></div>
+                <div class="card"><img src="images/skills/javascriptlogo.png" alt="JS" class="skills-img"><h3>Javascript</h3></div>
+                <div class="card"><img src="images/skills/javalogo.png" alt="Java" class="skills-img"><h3>Java</h3></div>
+                <div class="card"><img src="images/skills/microsoftsqllogo.png" alt="SQL" class="skills-img"><h3>SQL</h3></div>
+                <div class="card"><img src="images/skills/visualparadigmlogo.png" alt="VP" class="skills-img"><h3>Visual Paradigm</h3></div>
+                <div class="card"><img src="images/skills/figmalogo.png" alt="Figma" class="skills-img"><h3>Figma</h3></div>
+                <div class="card"><img src="images/skills/tableaulogo.png" alt="Tableau" class="skills-img"><h3>Tableau</h3></div>
+                <div class="card"><img src="images/skills/powerbilogo.jpg" alt="Power BI" class="skills-img"><h3>Power BI</h3></div>
+                
+                <div class="card"><img src="images/skills/pythonlogo.png" alt="Python" class="skills-img"><h3>Python</h3></div>
+                <div class="card"><img src="images/skills/htmllogo.png" alt="HTML" class="skills-img"><h3>HTML</h3></div>
+                <div class="card"><img src="images/skills/csslogo.png" alt="CSS" class="skills-img"><h3>CSS</h3></div>
+                <div class="card"><img src="images/skills/javascriptlogo.png" alt="JS" class="skills-img"><h3>Javascript</h3></div>
+                <div class="card"><img src="images/skills/javalogo.png" alt="Java" class="skills-img"><h3>Java</h3></div>
+                <div class="card"><img src="images/skills/microsoftsqllogo.png" alt="SQL" class="skills-img"><h3>SQL</h3></div>
+                <div class="card"><img src="images/skills/visualparadigmlogo.png" alt="VP" class="skills-img"><h3>Visual Paradigm</h3></div>
+                <div class="card"><img src="images/skills/figmalogo.png" alt="Figma" class="skills-img"><h3>Figma</h3></div>
+                <div class="card"><img src="images/skills/tableaulogo.png" alt="Tableau" class="skills-img"><h3>Tableau</h3></div>
+                <div class="card"><img src="images/skills/powerbilogo.jpg" alt="Power BI" class="skills-img"><h3>Power BI</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificate" class="certificate-section hidden section-target">
+        <h2>My Certificate</h2>
+        <div class="carousel-container">
+            <button class="nav-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track" id="track">
+                    <div class="slide">
+                        <div class="cert-image">
+                            <img src="images/certificates/bnccfrontendcretificate.jpg" alt="BNCC Front End Certificate">
+                        </div>
+                        <div class="cert-desc">
+                            <h3>BNCC Front End Certificate</h3>
+                            <p>I obtained this certificate after completing the Front End course by Bina Nusantara Computer Club (BNCC).</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="cert-image">
+                            <img src="images/certificates/mendixrapiddevelopercertificate.jpg" alt="Mendix Rapid Developer Certificate">
+                        </div>
+                        <div class="cert-desc">
+                            <h3>Mendix Rapid Developer Certificate</h3>
+                            <p>I obtained this certificate after completing the Digital Business Project course using Mendix.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="cert-image">
+                            <img src="images/certificates/beelinguamarketresearch&businesscommunication.jpg" alt="Beelingua Market Research & Business Communication">
+                        </div>
+                        <div class="cert-desc">
+                            <h3>Beelingua Market Research & Business Communication</h3>
+                            <p>I obtained this certificate after completing Beelingua B and C level.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="cert-image">
+                            <img src="images/certificates/beelinguaprofessionaloffice.png" alt="Beelingua Market Research & Business Communication">
+                        </div>
+                        <div class="cert-desc">
+                            <h3>Beelingua Professional Office</h3>
+                            <p>I obtained this certificate after completing Beelingua B and C level.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="cert-image">
+                            <img src="images/certificates/beelinguaadvancedenglish.png" alt="Beelingua Market Research & Business Communication">
+                        </div>
+                        <div class="cert-desc">
+                            <h3>Beelingua Advanced English</h3>
+                            <p>I obtained this certificate after completing Beelingua B and C level.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; Jakarta, 2026 | All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

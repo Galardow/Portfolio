@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 100px; 
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.hidden { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+.show { opacity: 1; transform: translateY(0); }
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar .logo a {
+    font-size: 2rem; 
+    font-weight: bold; 
+    color: #222;
+    text-decoration: none;
+}
+.navbar .logo a:hover {
+    cursor: pointer;
+    color: #0077B5;
+    text-decoration: underline;
+}
+
+.navbar .logo .btn { 
+    display: inline-flex; 
+    align-items: 
+    center; gap: 8px; 
+}
+
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #555; 
+    font-weight: 500; 
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover, .nav-links a.active { 
+    color: #000; 
+    font-weight: bold; 
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover { 
+    background-color: #444; 
+    transform: translateY(-3px); 
+}
+
+.hamburger { 
+    display: none; 
+    cursor: pointer; 
+    gap: 5px; 
+    flex-direction: column; 
+}
+
+.bar { 
+    display: block; 
+    width: 25px; 
+    height: 3px; 
+    background-color: #333; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.linkedin {
+    background: #0077B5;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links {
+        position: fixed; top: 0; right: 0; height: 100vh; width: 70%;
+        background-color: #fff; display: flex; flex-direction: column; z-index: 100;
+        transform: translateX(100%); transition: transform 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1); 
+    }
+    .nav-links li a {
+        text-align: left;
+        font-size: 20px;
+        margin: 50px 0 0 50px;
+    }
+    .nav-links.active { transform: translateX(0%); }
+    .nav-links li { margin: 30px 0; }
+    .hamburger.toggle .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.toggle .bar:nth-child(2) { opacity: 0; }
+    .hamburger.toggle .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+.overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); z-index: 99; opacity: 0;
+    pointer-events: none; transition: opacity 0.4s ease;
+}
+.overlay.active { opacity: 1; pointer-events: auto; }
+
+/* ================= HOME / HERO SECTION ================= */
+.hero {
+    display: flex; justify-content: space-between; align-items: center;
+    min-height: 80vh; padding: 50px 10%; gap: 50px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #000;
+    margin-left: 5px;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hero-image { flex: 1; display: flex; justify-content: center; }
+.hero-image img {
+    width: 100%; max-width: 380px; max-height: 460px;
+    border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    object-fit: cover; transition: transform 0.3s ease;
+}
+.hero-image img:hover { transform: translateY(-5px); }
+.hero-text { flex: 1; text-align: left; }
+.hero-text h1 { font-size: 3.5rem; margin-bottom: 15px; line-height: 1.2; color: #222; }
+.hero-text p { font-size: 1.2rem; color: #666; margin-bottom: 30px; }
+.highlight { font-weight: bold; color: #000; }
+
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; height: auto; }
+    .hero-text { text-align: center; margin-top: 30px; }
+}
+
+.portfolio-section { padding: 80px 10%; text-align: center; }
+.portfolio-section h2 { margin-bottom: 40px; font-size: 2rem; }
+.grid-container {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 80px; max-width: 900px; margin: 0 auto;
+}
+@media (max-width: 768px) { .grid-container { grid-template-columns: 1fr; } }
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-small {
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.portfolio-section .card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.portfolio-section .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease; 
+}
+
+.portfolio-section .card-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); 
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: bottom 0.4s ease; 
+}
+
+.portfolio-section .card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.portfolio-section .card:hover .card-content {
+    bottom: 0; 
+}
+
+.portfolio-section .card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.portfolio-section .card-content p {
+    color: #ddd;
+    font-size: 0.95rem;
+}
+
+.skills-section { padding: 80px 10%; text-align: center; background-color: #f7f7f7; border-radius: 20px; }
+
+.skills-section h2 { margin-bottom: 40px; font-size: 2rem; }
+
+.skills-carousel-wrapper {
+    overflow-x: auto; 
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    white-space: nowrap;
+    cursor: grab; 
+    scrollbar-width: none; 
+}
+
+.skills-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.skills-carousel-wrapper.active {
+    cursor: grabbing;
+}
+
+.skills-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+}
+
+.skills-section .card {
+    background-color: white; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; border-radius: 20px;
+    width: 160px; height: 200px; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills-section .card:hover { transform: translateY(-10px); cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.skills-img { height: 100px; width: 100px; margin-bottom: 15px;}
+
+.certificate-section { padding: 80px 10%; text-align: center; }
+.certificate-section h2 { margin-bottom: 40px; font-size: 2rem; }
+.carousel-container {
+    display: flex; align-items: center; justify-content: center;
+    max-width: 900px; margin: 0 auto; gap: 20px;
+}
+.carousel-track-wrapper {
+    overflow: hidden; width: 100%; border-radius: 12px;
+    background-color: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.carousel-track { display: flex; width: 500%; transition: transform 0.6s ease-in-out; }
+.slide {
+    width: 20%; display: flex; flex-direction: column;
+    align-items: center; padding: 30px; box-sizing: border-box;
+}
+.cert-image { width: 100%; max-width: 400px; margin-bottom: 20px; }
+.cert-image img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #eee; }
+.cert-desc { max-width: 600px; }
+.cert-desc h3 { margin-bottom: 10px; font-size: 1.3rem; color: #222; }
+.cert-desc p { color: #666; font-size: 1rem; }
+
+.nav-btn {
+    background-color: #222; color: white; border: none; border-radius: 50%;
+    width: 45px; height: 45px; font-size: 1.2rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; flex-shrink: 0;
+}
+.nav-btn:hover { background-color: #444; transform: scale(1.1); }
+
+.footer {
+    text-align: center; padding: 25px 10%; background-color: #fff;
+    color: #666; font-size: 0.9rem; border-top: 1px solid #eaeaea; margin-top: 60px;
+}
