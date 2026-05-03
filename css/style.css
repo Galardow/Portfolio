@@ -209,6 +209,89 @@ body {
     color: #000;
 }
 
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 8px 24px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+.portfolio-section .card.hide {
+    display: none;
+}
+
+.portfolio-section .card.show-item {
+    animation: fadeInScale 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.portfolio-section { padding: 80px 10%; text-align: center; }
+.portfolio-section h2 { margin-bottom: 40px; font-size: 2rem; }
+.grid-container {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 80px; max-width: 900px; margin: 0 auto;
+}
+@media (max-width: 768px) { .grid-container { grid-template-columns: 1fr; } }
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-small {
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 .portfolio-section .card {
     position: relative;
     border-radius: 12px;
