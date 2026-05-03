@@ -146,3 +146,30 @@ skillsWrapper.addEventListener('touchstart', () => {
 skillsWrapper.addEventListener('touchend', () => {
     startAutoScroll();
 });
+
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioCards = document.querySelectorAll('.portfolio-section .card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(button => button.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        portfolioCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            card.classList.remove('show-item');
+
+            if (filterValue === 'all' || filterValue === category) {
+                card.classList.remove('hide');
+                void card.offsetWidth; 
+                card.classList.add('show-item');
+            } else {
+                card.classList.add('hide');
+            }
+        });
+    });
+});
